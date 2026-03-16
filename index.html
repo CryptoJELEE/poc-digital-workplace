@@ -29,7 +29,7 @@
   body { background: #C8C3BB !important; }
   .reveal { font-family: 'Noto Sans KR', sans-serif; font-size: 24px; color: var(--kd-dark); background: transparent !important; }
   .reveal .slides { box-shadow: 0 4px 20px rgba(0,0,0,0.15); border-radius: 4px; }
-  .reveal .slides section { border: 1px solid #D0CBC3; box-sizing: border-box; min-height: 720px !important; }
+  .reveal .slides section { border: 1px solid #D0CBC3; box-sizing: border-box; height: 720px !important; max-height: 720px !important; overflow: hidden !important; }
   .reveal .slides > section { background: linear-gradient(to bottom, var(--kd-bg) 0px, var(--kd-bg) 56px, var(--kd-white) 57px, var(--kd-white) 100%); padding: 8px 32px 12px 32px; }
   /* 우상단 Kwangdong 로고 (일반 슬라이드) */
   .slide-logo { position: absolute; top: 6px; right: 30px; }
@@ -320,7 +320,7 @@
 <!-- 2-2: GWS vs M365 비교 -->
 <section>
   <h2>솔루션 비교 검토 결과</h2>
-  <table style="font-size:0.62em;">
+  <table style="font-size:0.56em;">
     <thead>
       <tr><th>평가 기준</th><th>Google Workspace</th><th>Microsoft 365</th><th>적합도</th></tr>
     </thead>
@@ -350,11 +350,6 @@
         <td><span class="tag tag-green">GWS ✓</span></td>
       </tr>
       <tr>
-        <td><strong>제약 규제</strong></td>
-        <td class="winner">HIPAA · GxP · Vault 지원</td>
-        <td>동등 지원</td>
-        <td><span class="tag tag-gray">유사</span></td>
-      </tr>
       <tr>
         <td><strong>TCO(총비용)</strong></td>
         <td class="winner">설치 불필요, 통합 패키지 우위</td>
@@ -363,9 +358,7 @@
       </tr>
     </tbody>
   </table>
-  <p style="font-size:0.7em; margin-top:12px; color:var(--kd-gray);">
-    <strong>결론:</strong> 클라우드 네이티브 협업 · AI 활용성 · 모바일 적합성에서 GWS가 광동제약 업무 특성에 적합
-  </p>
+
 </section>
 
 <!-- 2-3: Slack 필요성 -->
@@ -452,8 +445,7 @@
 <!-- 3-2: 부서별 검증 시나리오 -->
 <section>
   <h2>부서별 핵심 검증 시나리오</h2>
-  <p style="font-size:0.65em; color:var(--kd-gray);">각 부서의 실제 업무를 새로운 도구로 수행하고, AS-IS 대비 변화를 측정합니다</p>
-  <table style="font-size:0.55em;">
+  <table style="font-size:0.52em;">
     <thead>
       <tr><th>부서</th><th>검증 시나리오</th><th>현재 방식 (AS-IS)</th><th>PoC 방식 (TO-BE)</th></tr>
     </thead>
@@ -471,34 +463,22 @@
         <td>Docs 제안 모드, 버전 자동 관리</td>
       </tr>
       <tr>
-        <td><strong>총무</strong></td>
-        <td>사내 규정·매뉴얼 관리</td>
-        <td>규정 변경 시 메일 배포, 구버전 혼재</td>
-        <td>Docs 단일본 관리, 변경 이력 자동 추적</td>
-      </tr>
-      <tr>
-        <td><strong>디자인</strong></td>
-        <td>시안 파일 버전 관리·피드백</td>
-        <td>메일 첨부 시안 반복, 잘못된 버전으로 작업</td>
-        <td>Drive 단일 버전 + 스레드 피드백, 버전 오류 원천 차단</td>
+        <td><strong>총무/디자인</strong></td>
+        <td>규정 관리 · 시안 버전 관리</td>
+        <td>메일 배포, 구버전 혼재</td>
+        <td>Docs 단일본 + Drive 버전 자동 추적</td>
       </tr>
       <tr>
         <td><strong>F&B영업</strong></td>
-        <td>거래처 미팅 기록 + 프로모션 조율</td>
-        <td>개인 노트, 온/오프 정보 분리</td>
-        <td>모바일 Docs 즉시 작성, 통합 캘린더</td>
+        <td>미팅 기록 + 프로모션</td>
+        <td>개인 노트, 정보 분리</td>
+        <td>모바일 Docs + 통합 캘린더</td>
       </tr>
       <tr>
-        <td><strong>브랜드전략</strong></td>
-        <td>캠페인 기획~실행~분석</td>
-        <td>부서 순차 메일 전달, 정보 단절</td>
-        <td>프로젝트 채널에서 전 부서 동시 진행</td>
-      </tr>
-      <tr>
-        <td><strong>CMO전략</strong></td>
-        <td>주간 보고 취합 + 예산 관리</td>
-        <td>개별 PPT 메일 → 수작업 취합, 월말 예산 사후 인지</td>
-        <td>Slides 동시 편집, Sheets 실시간 예산 대시보드</td>
+        <td><strong>브랜드/CMO</strong></td>
+        <td>캠페인 기획 + 주간 보고</td>
+        <td>순차 메일, 수작업 취합</td>
+        <td>프로젝트 채널 + Slides 동시 편집</td>
       </tr>
     </tbody>
   </table>
@@ -657,7 +637,7 @@
 <!-- 4-1: 추진 일정 -->
 <section>
   <h2>추진 일정</h2>
-  <table style="font-size:0.58em;">
+  <table style="font-size:0.52em;">
     <thead>
       <tr>
         <th style="width:100px;">단계</th>
@@ -695,24 +675,7 @@
       </tr>
     </tbody>
   </table>
-  <div class="card-grid" style="margin-top:6px; font-size:0.6em; grid-template-columns: 1fr 1fr 1fr 1fr;">
-    <div class="card" style="border-left-color:var(--kd-navy);">
-      <h3>준비 (3월)</h3>
-      <ul><li>테넌트 구성</li><li>DLP 설정</li><li>보안 검증</li></ul>
-    </div>
-    <div class="card orange">
-      <h3>1~2주: 교육</h3>
-      <ul><li>전 사용자 VOD</li><li>챔피언 워크숍</li><li>그라운드 룰</li></ul>
-    </div>
-    <div class="card green">
-      <h3>3~6주: 검증</h3>
-      <ul><li>시나리오 적용</li><li>주차별 체크</li><li>개선 반복</li></ul>
-    </div>
-    <div class="card" style="border-left-color:#6554c0;">
-      <h3>7~8주: 평가</h3>
-      <ul><li>만족도 설문</li><li>KPI 분석</li><li>결과 보고</li></ul>
-    </div>
-  </div>
+
 </section>
 
 <!-- 4-2: 교육 계획 -->
@@ -926,8 +889,7 @@
 
 <section>
   <h2>문서 등급별 GWS 적용 기준</h2>
-  <p style="font-size:0.65em; color:var(--kd-gray);">「정보자산관리지침」 제11조에 따른 문서 보안 등급</p>
-  <table style="font-size:0.58em;">
+  <table style="font-size:0.52em;">
     <thead>
       <tr><th>보안 등급</th><th>정의</th><th>GWS 적용</th></tr>
     </thead>
@@ -949,28 +911,10 @@
       </tr>
     </tbody>
   </table>
-  <div class="card-grid" style="margin-top:16px;">
-    <div class="card">
-      <h3>🔐 GWS Admin 필수 보안 설정</h3>
-      <ul>
-        <li>외부 공유 기본값 <strong>OFF</strong> (도메인 내부만)</li>
-        <li>Trust Rules로 OU/그룹별 공유 범위 제어</li>
-        <li><strong>DLP</strong> — 주민번호·카드번호 자동 감지/차단</li>
-        <li>Context-Aware Access — 기기·IP 기반 접근 제어</li>
-        <li>2단계 인증 <strong>전 사용자 필수</strong></li>
-      </ul>
-    </div>
-    <div class="card green">
-      <h3>💬 Slack 보안 통제</h3>
-      <ul>
-        <li>1·2등급 논의 → <strong>비공개 채널</strong></li>
-        <li>1등급 문서 업로드 <strong>금지</strong></li>
-        <li>개인정보 직접 게시 금지 → Drive 링크로 대체</li>
-        <li>Slack Connect 사용 시 정보보호팀 <strong>사전 승인</strong></li>
-        <li>신규 앱 설치 시 정보보호팀 <strong>사전 승인</strong></li>
-      </ul>
-    </div>
-  </div>
+  <p style="font-size:0.52em; color:var(--kd-gray); margin-top:6px;">
+    🔐 <strong>GWS:</strong> 외부공유 OFF · DLP 자동차단 · Context-Aware · MFA 필수 &nbsp;|&nbsp;
+    💬 <strong>Slack:</strong> 1·2등급 비공개 · 업로드금지 · Connect/앱 정보보호팀 승인
+  </p>
 </section>
 
 <!-- ============================================ -->
@@ -1198,95 +1142,33 @@
     <div class="card">
       <h3>🎯 CMO 본부 (15개)</h3>
       <ul>
-        <li>🔒 팀 채널 ×4 (삼다수/디자인/브랜드/CMO전략)</li>
-        <li>🔒 삼다수: daily, issue</li>
-        <li>🔒 영업: online, offline, promo, weekly</li>
-        <li>#design-request (공개), 🔒 design-review</li>
-        <li>🔒 CMO: leadership, weekly, budget</li>
+        <li>🔒 팀 채널 ×4</li>
+        <li>🔒 삼다수 daily·issue</li>
+        <li>🔒 영업 4개 + 디자인 2개</li>
+        <li>🔒 CMO 3개 (리더십·주간·예산)</li>
       </ul>
     </div>
   </div>
-  <div class="card-grid" style="margin-top:6px; font-size:0.58em;">
-    <div class="card">
-      <h3>🛡️ 운영부서 (4개)</h3>
-      <ul>
-        <li>🔒 #team-it, #team-security</li>
-        <li>🔒 #poc-admin (관리자 전용)</li>
-        <li>🔒 #security-alert</li>
-      </ul>
-    </div>
-    <div class="card orange">
-      <h3>📁 프로젝트 채널 (필요 시)</h3>
-      <ul>
-        <li>🔒 #brand-campaign-[캠페인명]</li>
-        <li>🔒 #launch-[제품명]</li>
-        <li>🔒 #project-[과제명]</li>
-        <li>종료 후 아카이빙 (검색 가능)</li>
-      </ul>
-    </div>
-  </div>
+  <p style="font-size:0.55em; color:var(--kd-gray); margin-top:4px;">+ 🛡️ 운영 4개 (IT·보안·PoC관리·알림) · 📁 프로젝트 채널 (캠페인·론칭별 개설→아카이빙)</p>
 </section>
 
 <section>
   <h2>GWS 공유 드라이브 구조 <span class="tag tag-gray">예시</span></h2>
-  <p style="font-size:0.58em; color:var(--kd-gray);">※ 아래 구조는 초안이며, PoC 준비 단계에서 각 부서 협의를 통해 실제 운영에 맞게 조정됩니다</p>
-  <div class="card-grid-3" style="font-size:0.55em;">
+  <div class="card-grid-3" style="font-size:0.5em;">
     <div class="card">
-      <h3>📋 기획관리 본부</h3>
-      <pre style="font-size:0.85em; background:#f8f9fa; padding:12px; border-radius:8px; overflow-x:auto;">
-├─ 영업지원/
-│  ├─ 거래처별/
-│  │  ├─ 계약서/
-│  │  └─ 견적서/
-│  └─ 매출실적/
-├─ 총무/
-│  ├─ 사내규정/
-│  └─ 시설관리/
-└─ 전략기획/
-   ├─ 경영보고서/
-   ├─ 전략과제별/
-   └─ KPI·대시보드/</pre>
+      <h3>📋 기획관리</h3>
+      <p>영업지원(거래처·실적) · 총무(규정·시설) · 전략기획(보고서·KPI)</p>
     </div>
     <div class="card">
-      <h3>🎯 CMO 본부</h3>
-      <pre style="font-size:0.85em; background:#f8f9fa; padding:12px; border-radius:8px; overflow-x:auto;">
-├─ 삼다수사업/
-│  ├─ 실적데이터/
-│  └─ 이슈보고서/
-├─ 디자인/
-│  ├─ 브랜드가이드라인/
-│  └─ 프로젝트별/
-├─ F&B영업/
-│  ├─ 거래처별/
-│  └─ 프로모션/
-├─ 브랜드전략/
-│  └─ 캠페인별/
-└─ CMO전략/
-   ├─ 예산관리/
-   └─ 주간·월간보고/</pre>
+      <h3>🎯 CMO</h3>
+      <p>삼다수(실적·이슈) · 디자인(가이드) · F&B(거래처) · 브랜드(캠페인) · CMO전략(예산·보고)</p>
     </div>
     <div class="card">
-      <h3>🛡️ 운영부서</h3>
-      <pre style="font-size:0.85em; background:#f8f9fa; padding:12px; border-radius:8px; overflow-x:auto;">
-├─ IT운영/
-│  ├─ SOP·매뉴얼/
-│  ├─ IT자산관리/
-│  ├─ 장애보고서/
-│  └─ PoC 관리/
-└─ 정보보호/
-   ├─ 보안 가이드/
-   ├─ 점검 보고서/
-   └─ PoC 보안 평가/</pre>
-      <div style="margin-top:12px;">
-        <p><strong>접근 권한 원칙:</strong></p>
-        <ul>
-          <li>각 본부 드라이브 → 해당 본부만</li>
-          <li>크로스 협업 → 프로젝트별 별도 공유</li>
-          <li>1등급 문서 → GWS 저장 금지</li>
-        </ul>
-      </div>
+      <h3>🛡️ 운영</h3>
+      <p>IT운영(SOP·자산·PoC) · 정보보호(가이드·평가)</p>
     </div>
   </div>
+  <p style="font-size:0.5em; color:var(--kd-gray); margin-top:4px;">※ 본부별 격리 · 크로스 프로젝트별 공유 · 1등급 저장 금지 · PoC 준비 단계에서 부서 협의 후 조정</p>
 </section>
 
 <!-- ============================================ -->
