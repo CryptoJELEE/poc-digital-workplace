@@ -750,26 +750,8 @@
 <div class="page">
   <div class="page-logo"><img src="logo-vertical.png" alt="Kwangdong"></div>
   <div class="page-inner">
-    <h2><span class="tag tag-blue" style="font-size:12px; vertical-align:middle; margin-right:8px;">05 보안 컴플라이언스</span> 3가지 핵심 논리</h2>
-    <div class="card-grid-3 mt-8">
-      <div class="card green">
-        <h3>🔑 데이터 소유권</h3>
-        <p>"구글은 인프라만 제공. 데이터 권리는 <strong>광동제약</strong>에 있습니다."</p>
-        <p style="font-style:italic; font-size:11px;">"은행 금고를 빌려 쓴다고 은행이 장부를 볼 수 없습니다. 열쇠는 우리 IT팀만 보유합니다."</p>
-      </div>
-      <div class="card green">
-        <h3>🛡️ 글로벌 표준 보안</h3>
-        <p>"자체 서버보다 <strong>구글의 수천 명 보안 전문가</strong>가 24시간 방어합니다."</p>
-        <p style="font-style:italic; font-size:11px;">"구글의 보안 성벽 안에 우리만의 전용 구역을 만드는 것입니다."</p>
-      </div>
-      <div class="card green">
-        <h3>👁️ 투명한 감시</h3>
-        <p>"누가 언제 어떤 문서를 보았는지 <strong>모든 행동 로그</strong>를 남깁니다."</p>
-        <p style="font-style:italic; font-size:11px;">"과거에는 추적 불가. GWS는 실시간 모니터링·차단이 가능합니다."</p>
-      </div>
-    </div>
-  </div>
-    <table class="mt-12">
+    <h2><span class="tag tag-blue" style="font-size:12px; vertical-align:middle; margin-right:8px;">05 보안 컴플라이언스</span> 문서등급별 적용 기준 & 핵심 논리</h2>
+    <table>
       <thead><tr><th>보안 등급</th><th>정의</th><th>GWS 적용</th></tr></thead>
       <tbody>
         <tr><td><strong class="risk-high">1등급 (비밀)</strong></td><td>주요 재무·합병·매각 관련 문서</td><td>❌ GWS 저장/공유 <strong>금지</strong> (PoC 범위 제외)</td></tr>
@@ -777,6 +759,40 @@
         <tr><td><strong class="risk-low">3등급 (사내비)</strong></td><td>사내 유통 허용 일반 문서</td><td>✅ GWS 자유 활용 (외부 공유는 건별 승인)</td></tr>
       </tbody>
     </table>
+    <div class="card-grid-3 mt-16">
+      <div class="card green">
+        <h3>🔑 데이터 소유권</h3>
+        <p>구글은 인프라만 제공. 데이터 권리는 <strong>광동제약</strong>에 귀속</p>
+      </div>
+      <div class="card green">
+        <h3>🛡️ 글로벌 표준 보안</h3>
+        <p>ISO 27001/27017, SOC 2/3, HIPAA — <strong>구글 24시간 방어</strong></p>
+      </div>
+      <div class="card green">
+        <h3>👁️ 투명한 감시</h3>
+        <p>모든 행동 로그 기록 — 실시간 <strong>모니터링·차단</strong> 가능</p>
+      </div>
+    </div>
+    <div class="card-grid mt-12">
+      <div class="card">
+        <h3>🔐 GWS Admin 필수 보안</h3>
+        <ul>
+          <li>외부 공유 기본값 OFF (도메인 내부만)</li>
+          <li>DLP — 주민번호·카드번호 자동 감지/차단</li>
+          <li>Context-Aware Access — 기기·IP 기반 접근 제어</li>
+          <li>2단계 인증 전 사용자 필수</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>💬 Slack 보안 통제</h3>
+        <ul>
+          <li>1·2등급 논의 → 비공개 채널</li>
+          <li>1등급 문서 업로드 금지</li>
+          <li>개인정보 직접 게시 금지 → Drive 링크로 대체</li>
+          <li>Slack Connect · 앱 설치 시 정보보호팀 사전 승인</li>
+        </ul>
+      </div>
+    </div>
   </div>
   <div class="page-num">15</div>
 </div>
@@ -848,45 +864,6 @@
   <div class="page-num">16</div>
 </div>
 
-<!-- APPENDIX B -->
-
-
-<div class="page">
-  <div class="page-logo"><img src="logo-vertical.png" alt="Kwangdong"></div>
-  <div class="page-inner">
-    <h2>문서 등급별 GWS 적용 기준</h2>
-    <table>
-      <thead><tr><th>보안 등급</th><th>정의</th><th>GWS 적용</th></tr></thead>
-      <tbody>
-        <tr><td><strong class="risk-high">1등급 (비밀)</strong></td><td>주요 재무·합병·매각 관련 문서</td><td>❌ GWS 저장/공유 <strong>금지</strong> (PoC 범위 제외)</td></tr>
-        <tr><td><strong class="risk-mid">2등급 (부서비)</strong></td><td>인사정보, 영업정책, 고객정보, 계약서</td><td>⚠️ 조건부 허용: 특정인만 공유, 외부 차단</td></tr>
-        <tr><td><strong class="risk-low">3등급 (사내비)</strong></td><td>사내 유통 허용 일반 문서</td><td>✅ GWS 자유 활용 (외부 공유는 건별 승인)</td></tr>
-      </tbody>
-    </table>
-    <div class="card-grid mt-16">
-      <div class="card">
-        <h3>🔐 GWS Admin 필수 보안</h3>
-        <ul>
-          <li>외부 공유 기본값 OFF (도메인 내부만)</li>
-          <li>DLP — 주민번호·카드번호 자동 감지/차단</li>
-          <li>Context-Aware Access — 기기·IP 기반 접근 제어</li>
-          <li>2단계 인증 전 사용자 필수</li>
-        </ul>
-      </div>
-      <div class="card green">
-        <h3>💬 Slack 보안 통제</h3>
-        <ul>
-          <li>1·2등급 논의 → 비공개 채널</li>
-          <li>1등급 문서 업로드 금지</li>
-          <li>개인정보 직접 게시 금지 → Drive 링크로 대체</li>
-          <li>Slack Connect · 앱 설치 시 정보보호팀 사전 승인</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <div class="page-num">17</div>
-</div>
-
 <!-- APPENDIX C -->
 
 
@@ -922,7 +899,7 @@
       </div>
     </div>
   </div>
-  <div class="page-num">18</div>
+  <div class="page-num">17</div>
 </div>
 
 <div class="page">
@@ -957,7 +934,7 @@
       </div>
     </div>
   </div>
-  <div class="page-num">19</div>
+  <div class="page-num">18</div>
 </div>
 
 <div class="page">
@@ -1003,7 +980,7 @@
       </div>
     </div>
   </div>
-  <div class="page-num">20</div>
+  <div class="page-num">19</div>
 </div>
 
 <!-- APPENDIX D -->
@@ -1027,7 +1004,7 @@
       </tbody>
     </table>
   </div>
-  <div class="page-num">21</div>
+  <div class="page-num">20</div>
 </div>
 
 <div class="page">
@@ -1062,7 +1039,7 @@
       </div>
     </div>
   </div>
-  <div class="page-num">22</div>
+  <div class="page-num">21</div>
 </div>
 
 <div class="page">
@@ -1155,7 +1132,7 @@
       </div>
     </div>
   </div>
-  <div class="page-num">23</div>
+  <div class="page-num">22</div>
 </div>
 
 <!-- GWS 공유 드라이브 구조 -->
@@ -1212,7 +1189,7 @@
       </div>
     </div>
   </div>
-  <div class="page-num">24</div>
+  <div class="page-num">23</div>
 </div>
 
 </body>
