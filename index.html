@@ -29,16 +29,40 @@
   .reveal { font-family: 'Noto Sans KR', sans-serif; font-size: 24px; color: var(--kd-dark); background: transparent !important; }
   .reveal .slides { box-shadow: 0 4px 20px rgba(0,0,0,0.15); border-radius: 4px; }
   .reveal .slides section { padding: 36px 44px; border: 1px solid #D0CBC3; box-sizing: border-box; overflow: hidden; height: 720px !important; width: 1280px !important; }
-  .reveal .slides > section { background: var(--kd-bg); }
+  .reveal .slides > section { background: var(--kd-white); position: relative; }
+  /* 일반 장표 상단 헤더 바 */
+  .reveal .slides > section:not(.cover-slide):not(.section-divider)::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 80px;
+    background: var(--kd-bg);
+    z-index: 0;
+  }
+  .reveal .slides > section:not(.cover-slide):not(.section-divider)::after {
+    content: '';
+    position: absolute;
+    top: 60px; left: 0; right: 0;
+    height: 40px;
+    background: var(--kd-white);
+    border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+    z-index: 0;
+  }
+  .reveal .slides > section:not(.cover-slide):not(.section-divider) > * { position: relative; z-index: 1; }
+  /* 우상단 Kwangdong 로고 (일반 슬라이드) */
+  .slide-logo { position: absolute; top: 12px; right: 36px; z-index: 2; display: flex; align-items: center; gap: 6px; }
+  .slide-logo svg { width: 36px; height: 22px; }
+  .slide-logo span { font-size: 0.55em; font-weight: 700; color: var(--kd-dark); }
   .reveal h1, .reveal h2, .reveal h3 { font-weight: 700; color: var(--kd-dark); letter-spacing: -0.02em; }
   .reveal h1 { font-size: 2.0em; }
-  .reveal h2 { font-size: 1.35em; border-bottom: 2px solid var(--kd-accent); padding-bottom: 8px; display: inline-block; margin-bottom: 10px; }
+  .reveal h2 { font-size: 1.15em; border-bottom: none; padding-bottom: 0; display: block; margin-bottom: 14px; margin-top: 0; }
   .reveal h3 { font-size: 1.15em; color: var(--kd-navy); }
   .reveal .slide-number { font-size: 14px; color: var(--kd-gray-light); }
   .reveal section { text-align: left; }
 
   /* Cover */
-  .cover-slide { text-align: center !important; position: relative; }
+  .cover-slide { text-align: center !important; position: relative; background: var(--kd-bg) !important; }
+  .cover-slide::before, .cover-slide::after { display: none !important; }
   .cover-slide h1 { font-size: 1.8em; line-height: 1.4; margin-bottom: 0.3em; color: var(--kd-dark); }
   .cover-slide .subtitle { font-size: 1.0em; color: var(--kd-gray); font-weight: 500; margin-bottom: 1em; }
   .cover-slide .meta { font-size: 0.7em; color: var(--kd-gray-light); }
@@ -93,7 +117,8 @@
   .exec-quote { background: var(--kd-white); border-left: 4px solid var(--kd-accent); padding: 12px 16px; border-radius: 0 12px 12px 0; margin: 12px 0; font-style: italic; font-size: 0.75em; color: var(--kd-gray); box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
 
   /* Section divider */
-  .section-divider { text-align: center !important; }
+  .section-divider { text-align: center !important; background: var(--kd-bg) !important; }
+  .section-divider::before, .section-divider::after { display: none !important; }
   .section-divider h2 { font-size: 1.8em; border: none; display: block; }
   .section-divider .section-num { font-size: 4em; font-weight: 900; color: var(--kd-accent); opacity: 0.12; position: absolute; top: 20%; left: 50%; transform: translateX(-50%); }
   .section-divider p { font-size: 0.9em; color: var(--kd-gray); }
@@ -1313,6 +1338,14 @@ Reveal.initialize({
   center: false,
   disableLayout: false,
   controlsTutorial: false
+});
+
+// 일반 슬라이드에 Kwangdong 로고 자동 삽입
+document.querySelectorAll('.reveal .slides > section:not(.cover-slide):not(.section-divider)').forEach(function(slide) {
+  var logo = document.createElement('div');
+  logo.className = 'slide-logo';
+  logo.innerHTML = '<svg viewBox="0 0 48 28"><ellipse cx="14" cy="14" rx="12" ry="9" fill="none" stroke="#CC3300" stroke-width="2.2"/><ellipse cx="34" cy="14" rx="12" ry="9" fill="none" stroke="#CC3300" stroke-width="2.2"/><circle cx="11" cy="11" r="1.8" fill="#CC3300"/><circle cx="37" cy="11" r="1.8" fill="#CC3300"/><path d="M7,17 Q14,22 20,14" fill="none" stroke="#CC3300" stroke-width="1.3"/><path d="M28,17 Q35,22 41,14" fill="none" stroke="#CC3300" stroke-width="1.3"/></svg><span>Kwangdong</span>';
+  slide.appendChild(logo);
 });
 </script>
 </body>
