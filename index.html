@@ -25,8 +25,10 @@
     --kd-orange: #C07530;
     --kd-light: #F5F2ED;
   }
-  .reveal { font-family: 'Noto Sans KR', sans-serif; font-size: 24px; color: var(--kd-dark); }
-  .reveal .slides section { padding: 40px 50px; }
+  body { background: #C8C3BB !important; }
+  .reveal { font-family: 'Noto Sans KR', sans-serif; font-size: 24px; color: var(--kd-dark); background: transparent !important; }
+  .reveal .slides { box-shadow: 0 4px 20px rgba(0,0,0,0.15); border-radius: 4px; }
+  .reveal .slides section { padding: 40px 50px; border: 1px solid #D0CBC3; }
   .reveal .slides > section { background: var(--kd-bg); }
   .reveal h1, .reveal h2, .reveal h3 { font-weight: 700; color: var(--kd-dark); letter-spacing: -0.02em; }
   .reveal h1 { font-size: 2.0em; }
