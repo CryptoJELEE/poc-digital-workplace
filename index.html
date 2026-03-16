@@ -6,99 +6,97 @@
 <title>업무 생산성 혁신을 위한 디지털 워크플레이스 전환 검증 계획</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/white.css">
+<style>.reveal { background: #EDE8E0; }</style>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
   :root {
-    --kd-blue: #003366;
-    --kd-navy: #001a33;
-    --kd-accent: #0066cc;
-    --kd-green: #00875a;
-    --kd-red: #de350b;
-    --kd-orange: #ff8b00;
-    --kd-light: #f4f5f7;
-    --kd-gray: #6b778c;
+    --kd-bg: #EDE8E0;
+    --kd-bg-light: #F5F2ED;
+    --kd-white: #FFFFFF;
+    --kd-dark: #333333;
+    --kd-gray: #555555;
+    --kd-gray-light: #8a8580;
+    --kd-accent: #CC3300;
+    --kd-accent-soft: #E8D5C8;
+    --kd-blue: #2C5F7C;
+    --kd-green: #4A7C59;
+    --kd-navy: #3D4F5F;
+    --kd-red: #CC3300;
+    --kd-orange: #C07530;
+    --kd-light: #F5F2ED;
   }
-  .reveal { font-family: 'Noto Sans KR', sans-serif; font-size: 28px; color: #172b4d; }
-  .reveal h1, .reveal h2, .reveal h3 { font-weight: 700; color: var(--kd-blue); letter-spacing: -0.02em; }
+  .reveal { font-family: 'Noto Sans KR', sans-serif; font-size: 28px; color: var(--kd-dark); }
+  .reveal .slides > section { background: var(--kd-bg); }
+  .reveal h1, .reveal h2, .reveal h3 { font-weight: 700; color: var(--kd-dark); letter-spacing: -0.02em; }
   .reveal h1 { font-size: 2.0em; }
-  .reveal h2 { font-size: 1.5em; border-bottom: 3px solid var(--kd-accent); padding-bottom: 10px; display: inline-block; }
-  .reveal h3 { font-size: 1.15em; color: var(--kd-accent); }
-  .reveal .slide-number { font-size: 14px; color: var(--kd-gray); }
+  .reveal h2 { font-size: 1.5em; border-bottom: 2px solid var(--kd-accent); padding-bottom: 10px; display: inline-block; }
+  .reveal h3 { font-size: 1.15em; color: var(--kd-navy); }
+  .reveal .slide-number { font-size: 14px; color: var(--kd-gray-light); }
   .reveal section { text-align: left; }
 
   /* Cover */
-  .cover-slide { text-align: center !important; }
-  .cover-slide h1 { font-size: 1.8em; line-height: 1.4; margin-bottom: 0.3em; }
-  .cover-slide .subtitle { font-size: 1.0em; color: var(--kd-accent); font-weight: 500; margin-bottom: 1em; }
-  .cover-slide .meta { font-size: 0.7em; color: var(--kd-gray); }
-  .cover-slide .company { font-size: 0.9em; color: var(--kd-blue); font-weight: 700; margin-bottom: 0.5em; }
+  .cover-slide { text-align: center !important; position: relative; }
+  .cover-slide h1 { font-size: 1.8em; line-height: 1.4; margin-bottom: 0.3em; color: var(--kd-dark); }
+  .cover-slide .subtitle { font-size: 1.0em; color: var(--kd-gray); font-weight: 500; margin-bottom: 1em; }
+  .cover-slide .meta { font-size: 0.7em; color: var(--kd-gray-light); }
+  .cover-slide .company { font-size: 0.9em; color: var(--kd-dark); font-weight: 700; margin-bottom: 0.5em; }
 
   /* Cards */
   .card-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px; }
   .card-grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-top: 20px; }
-  .card { background: var(--kd-light); border-radius: 12px; padding: 20px; border-left: 4px solid var(--kd-accent); }
+  .card { background: var(--kd-white); border-radius: 12px; padding: 20px; border-left: 4px solid var(--kd-blue); box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
   .card.green { border-left-color: var(--kd-green); }
   .card.red { border-left-color: var(--kd-red); }
   .card.orange { border-left-color: var(--kd-orange); }
-  .card h3 { margin: 0 0 8px 0; font-size: 0.95em; }
-  .card p, .card li { font-size: 0.78em; color: #42526e; margin: 4px 0; }
+  .card h3 { margin: 0 0 8px 0; font-size: 0.95em; color: var(--kd-dark); }
+  .card p, .card li { font-size: 0.78em; color: var(--kd-gray); margin: 4px 0; }
   .card ul { padding-left: 16px; margin: 6px 0; }
 
   /* Big number */
-  .big-num { font-size: 3.0em; font-weight: 900; color: var(--kd-accent); line-height: 1; }
+  .big-num { font-size: 3.0em; font-weight: 900; color: var(--kd-blue); line-height: 1; }
   .big-num.red { color: var(--kd-red); }
   .big-num.green { color: var(--kd-green); }
   .num-label { font-size: 0.7em; color: var(--kd-gray); margin-top: 4px; }
 
   /* Table */
   .reveal table { font-size: 0.72em; border-collapse: collapse; width: 100%; margin-top: 16px; }
-  .reveal table th { background: var(--kd-blue); color: white; padding: 10px 12px; text-align: left; font-weight: 500; }
-  .reveal table td { padding: 8px 12px; border-bottom: 1px solid #dfe1e6; }
-  .reveal table tr:nth-child(even) { background: #f8f9fa; }
-  .reveal table .winner { background: #e3fcef; font-weight: 500; }
+  .reveal table th { background: var(--kd-navy); color: white; padding: 10px 12px; text-align: left; font-weight: 500; }
+  .reveal table td { padding: 8px 12px; border-bottom: 1px solid #D8D3CC; }
+  .reveal table tr:nth-child(even) { background: var(--kd-bg-light); }
+  .reveal table .winner { background: #E8F0E4; font-weight: 500; }
 
   /* Tags */
   .tag { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 0.65em; font-weight: 500; margin: 2px; }
-  .tag-blue { background: #deebff; color: #0052cc; }
-  .tag-green { background: #e3fcef; color: #006644; }
-  .tag-red { background: #ffebe6; color: #bf2600; }
-  .tag-gray { background: #f4f5f7; color: #5e6c84; }
+  .tag-blue { background: #D8E8F0; color: var(--kd-blue); }
+  .tag-green { background: #E0ECDF; color: #2D5F3A; }
+  .tag-red { background: #F5DDD5; color: #8B2200; }
+  .tag-gray { background: #E8E4DD; color: var(--kd-gray); }
 
   /* Flow */
   .flow { display: flex; align-items: center; justify-content: center; gap: 8px; margin: 20px 0; flex-wrap: wrap; }
-  .flow-step { background: var(--kd-light); padding: 12px 18px; border-radius: 10px; font-size: 0.75em; font-weight: 500; text-align: center; min-width: 120px; }
-  .flow-step.active { background: var(--kd-accent); color: white; }
-  .flow-arrow { font-size: 1.2em; color: var(--kd-gray); }
+  .flow-step { background: var(--kd-white); padding: 12px 18px; border-radius: 10px; font-size: 0.75em; font-weight: 500; text-align: center; min-width: 120px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+  .flow-step.active { background: var(--kd-navy); color: white; }
+  .flow-arrow { font-size: 1.2em; color: var(--kd-gray-light); }
 
   /* Comparison */
   .compare { display: grid; grid-template-columns: 1fr 60px 1fr; gap: 0; margin-top: 16px; align-items: start; }
   .compare-left, .compare-right { padding: 16px; border-radius: 12px; }
-  .compare-left { background: #ffebe6; }
-  .compare-right { background: #e3fcef; }
-  .compare-mid { display: flex; align-items: center; justify-content: center; font-size: 1.5em; color: var(--kd-gray); padding-top: 30px; }
+  .compare-left { background: var(--kd-white); border: 1px solid #D8D3CC; }
+  .compare-right { background: #E8F0E4; }
+  .compare-mid { display: flex; align-items: center; justify-content: center; font-size: 1.5em; color: var(--kd-gray-light); padding-top: 30px; }
   .compare h3 { margin: 0 0 10px 0; }
 
-  /* Timeline */
-  .timeline { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; margin-top: 16px; }
-  .timeline-header { font-size: 0.6em; font-weight: 700; color: var(--kd-blue); text-align: center; padding: 6px 2px; }
-  .timeline-bar { height: 24px; border-radius: 4px; }
-  .timeline-bar.prep { background: var(--kd-accent); }
-  .timeline-bar.edu { background: var(--kd-orange); }
-  .timeline-bar.poc { background: var(--kd-green); }
-  .timeline-bar.eval { background: #6554c0; }
-  .timeline-label { font-size: 0.6em; color: #42526e; padding: 4px 0; white-space: nowrap; }
-
   /* Quote */
-  .exec-quote { background: var(--kd-light); border-left: 4px solid var(--kd-accent); padding: 16px 20px; border-radius: 0 12px 12px 0; margin: 16px 0; font-style: italic; font-size: 0.85em; color: #42526e; }
+  .exec-quote { background: var(--kd-white); border-left: 4px solid var(--kd-accent); padding: 16px 20px; border-radius: 0 12px 12px 0; margin: 16px 0; font-style: italic; font-size: 0.85em; color: var(--kd-gray); box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
 
   /* Section divider */
   .section-divider { text-align: center !important; }
   .section-divider h2 { font-size: 1.8em; border: none; display: block; }
-  .section-divider .section-num { font-size: 4em; font-weight: 900; color: var(--kd-accent); opacity: 0.15; position: absolute; top: 20%; left: 50%; transform: translateX(-50%); }
+  .section-divider .section-num { font-size: 4em; font-weight: 900; color: var(--kd-accent); opacity: 0.12; position: absolute; top: 20%; left: 50%; transform: translateX(-50%); }
   .section-divider p { font-size: 0.9em; color: var(--kd-gray); }
 
   /* Footer */
-  .slide-footer { position: absolute; bottom: 16px; left: 40px; right: 40px; font-size: 0.5em; color: #b3bac5; display: flex; justify-content: space-between; }
+  .slide-footer { position: absolute; bottom: 16px; left: 40px; right: 40px; font-size: 0.5em; color: var(--kd-gray-light); display: flex; justify-content: space-between; }
 
   /* Risk matrix */
   .risk-high { color: var(--kd-red); font-weight: 700; }
@@ -106,9 +104,9 @@
   .risk-low { color: var(--kd-green); font-weight: 700; }
 
   /* Scenario */
-  .scenario-box { background: linear-gradient(135deg, #f0f4ff 0%, #e8f5e9 100%); border-radius: 12px; padding: 16px; margin: 8px 0; }
-  .scenario-box h4 { margin: 0 0 6px; font-size: 0.85em; color: var(--kd-blue); }
-  .scenario-box p { font-size: 0.72em; margin: 3px 0; color: #42526e; }
+  .scenario-box { background: var(--kd-white); border-radius: 12px; padding: 16px; margin: 8px 0; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+  .scenario-box h4 { margin: 0 0 6px; font-size: 0.85em; color: var(--kd-dark); }
+  .scenario-box p { font-size: 0.72em; margin: 3px 0; color: var(--kd-gray); }
 </style>
 </head>
 <body>
@@ -118,46 +116,49 @@
 <!-- ============================================ -->
 <!-- COVER -->
 <!-- ============================================ -->
-<section class="cover-slide">
-  <div class="company">광동제약</div>
-  <h1 style="font-size:1.45em; line-height:1.5;">업무 생산성 혁신을 위한<br>디지털 워크플레이스 전환 검증 계획</h1>
+<section class="cover-slide" style="padding:0; position:relative;">
+  <!-- 표지 콘텐츠 -->
+  <div style="text-align:left; padding:0 0 0 8%; position:relative; z-index:2;">
+    <h1 style="font-size:1.6em; line-height:1.5; margin-top:80px; color:var(--kd-dark);">업무 생산성 혁신을 위한<br>디지털 워크플레이스 전환 검증 계획</h1>
 
-  <!-- Executive Summary Box -->
-  <div style="background:var(--kd-light); border-radius:16px; padding:20px 28px; margin:20px auto; max-width:920px; text-align:left;">
-    <div style="font-size:0.72em; font-weight:700; color:var(--kd-blue); margin-bottom:12px;">📋 Executive Summary</div>
-    <table style="font-size:0.68em; margin:0; width:100%;">
-      <tbody>
-        <tr>
-          <td style="font-weight:700; width:100px; color:var(--kd-blue); border:none; padding:4px 8px;">목적</td>
-          <td style="border:none; padding:4px 8px;">AI 시대 업무 인프라 전환을 위한 <strong>클라우드 기반 협업 환경(GWS + Slack) 사전 검증</strong></td>
-        </tr>
-        <tr>
-          <td style="font-weight:700; color:var(--kd-blue); border:none; padding:4px 8px;">대상</td>
-          <td style="border:none; padding:4px 8px;"><strong>CMO본부(95명) + 기획관리본부(60명) = 155명</strong> — 영업·마케팅·기획·디자인 등 다양한 직무 커버</td>
-        </tr>
-        <tr>
-          <td style="font-weight:700; color:var(--kd-blue); border:none; padding:4px 8px;">기간</td>
-          <td style="border:none; padding:4px 8px;">준비 1주 (3.23~31) + <strong>PoC 8주</strong> (4.1 ~ 5.27) — 교육 2주 + 검증 4주 + 평가 2주</td>
-        </tr>
-        <tr>
-          <td style="font-weight:700; color:var(--kd-blue); border:none; padding:4px 8px;">비용</td>
-          <td style="border:none; padding:4px 8px;">GWS 트라이얼 <strong>무상</strong> · 교육 메가존 <strong>무상</strong> · Slack 별도 협의</td>
-        </tr>
-        <tr>
-          <td style="font-weight:700; color:var(--kd-blue); border:none; padding:4px 8px;">기대 효과</td>
-          <td style="border:none; padding:4px 8px;">보고서 취합 시간 단축 · 파일 버전 오류 제거 · AI 활용 기반 확보</td>
-        </tr>
-        <tr>
-          <td style="font-weight:700; color:var(--kd-blue); border:none; padding:4px 8px;">검증 방법</td>
-          <td style="border:none; padding:4px 8px;">부서별 실무 시나리오 적용 → 사전/사후 KPI 비교 → 데이터 기반 판단</td>
-        </tr>
-      </tbody>
-    </table>
+    <!-- Executive Summary -->
+    <div style="background:var(--kd-white); border-radius:12px; padding:18px 24px; margin:20px 0; max-width:860px; box-shadow:0 2px 8px rgba(0,0,0,0.06);">
+      <table style="font-size:0.62em; margin:0; width:100%;">
+        <tbody>
+          <tr>
+            <td style="font-weight:700; width:80px; color:var(--kd-accent); border:none; padding:3px 8px;">목적</td>
+            <td style="border:none; padding:3px 8px;">AI 시대 업무 인프라 전환을 위한 <strong>클라우드 기반 협업 환경(GWS + Slack) 사전 검증</strong></td>
+          </tr>
+          <tr>
+            <td style="font-weight:700; color:var(--kd-accent); border:none; padding:3px 8px;">대상</td>
+            <td style="border:none; padding:3px 8px;"><strong>CMO본부(95명) + 기획관리본부(60명) = 155명</strong></td>
+          </tr>
+          <tr>
+            <td style="font-weight:700; color:var(--kd-accent); border:none; padding:3px 8px;">기간</td>
+            <td style="border:none; padding:3px 8px;">준비 1주 (3.23~31) + <strong>PoC 8주</strong> (4.1 ~ 5.27)</td>
+          </tr>
+          <tr>
+            <td style="font-weight:700; color:var(--kd-accent); border:none; padding:3px 8px;">비용</td>
+            <td style="border:none; padding:3px 8px;">GWS <strong>무상</strong>(트라이얼) · 교육 <strong>무상</strong>(메가존) · Slack 별도 협의</td>
+          </tr>
+          <tr>
+            <td style="font-weight:700; color:var(--kd-accent); border:none; padding:3px 8px;">기대 효과</td>
+            <td style="border:none; padding:3px 8px;">보고서 취합 단축 · 파일 버전 오류 제거 · AI 활용 기반 확보</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div style="font-size:0.8em; font-weight:700; color:var(--kd-dark); margin-top:16px;">AI센터</div>
+    <div style="font-size:0.7em; color:var(--kd-gray);">2026. 03</div>
   </div>
 
-  <div class="meta" style="margin-top:8px;">
-    AI센터 · 2026년 3월<br>
-    <span class="tag tag-blue">Confidential</span>
+  <!-- 하단 웨이브 곡선 -->
+  <svg style="position:absolute; bottom:0; left:0; width:100%; z-index:1;" viewBox="0 0 1280 100" preserveAspectRatio="none">
+    <path d="M0,100 L0,65 Q250,20 500,45 Q700,65 900,35 Q1100,10 1280,30 L1280,100 Z" fill="#FFFFFF"/>
+  </svg>
+  <div style="position:absolute; bottom:12px; right:40px; font-size:0.75em; font-weight:700; color:var(--kd-dark); z-index:3;">
+    Kwangdong
   </div>
 </section>
 
@@ -892,13 +893,17 @@
 <!-- ============================================ -->
 <!-- CLOSING -->
 <!-- ============================================ -->
-<section class="cover-slide">
-  <div style="margin-top:60px;">
-    <h1 style="font-size:1.6em;">감사합니다</h1>
-    <div style="margin-top:40px;">
-      <div class="company">광동제약 AI센터</div>
-      <p style="font-size:0.7em; color:#b3bac5;">2026년 3월</p>
-    </div>
+<section class="cover-slide" style="padding:0; position:relative;">
+  <div style="text-align:left; padding:0 0 0 8%; position:relative; z-index:2;">
+    <h1 style="font-size:2em; margin-top:180px; color:var(--kd-dark);">감사합니다</h1>
+    <div style="font-size:0.85em; font-weight:700; color:var(--kd-dark); margin-top:24px;">광동제약 AI센터</div>
+    <div style="font-size:0.72em; color:var(--kd-gray);">2026. 03</div>
+  </div>
+  <svg style="position:absolute; bottom:0; left:0; width:100%; z-index:1;" viewBox="0 0 1280 100" preserveAspectRatio="none">
+    <path d="M0,100 L0,65 Q250,20 500,45 Q700,65 900,35 Q1100,10 1280,30 L1280,100 Z" fill="#FFFFFF"/>
+  </svg>
+  <div style="position:absolute; bottom:12px; right:40px; font-size:0.75em; font-weight:700; color:var(--kd-dark); z-index:3;">
+    Kwangdong
   </div>
 </section>
 
