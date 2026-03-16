@@ -1330,6 +1330,13 @@ document.querySelectorAll('.reveal .slides > section:not(.cover-slide):not(.sect
   logo.innerHTML = '<img src="logo-vertical.png" alt="Kwangdong">';
   slide.appendChild(logo);
 });
+
+// 인쇄 버튼 (우하단)
+var printBtn = document.createElement('div');
+printBtn.innerHTML = '🖨️ PDF';
+printBtn.style.cssText = 'position:fixed;bottom:16px;right:16px;z-index:9999;background:#3D4F5F;color:#fff;padding:8px 16px;border-radius:8px;font-size:14px;cursor:pointer;font-family:Noto Sans KR,sans-serif;box-shadow:0 2px 8px rgba(0,0,0,0.2);';
+printBtn.onclick = function() { window.open(location.href.split('?')[0] + '?print-pdf', '_blank'); };
+if (!window.location.search.match(/print-pdf/gi)) document.body.appendChild(printBtn);
 </script>
 </body>
 </html>
