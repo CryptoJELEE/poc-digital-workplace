@@ -381,31 +381,41 @@
 
 <!-- 2-3: Slack 필요성 -->
 <section>
-  <h2>Slack 별도 도입이 필요한 이유</h2>
-  <p style="font-size:0.75em; color:var(--kd-gray);">Google Chat으로 충분하지 않은 3가지 시나리오</p>
-  <div class="card-grid-3">
-    <div class="scenario-box">
-      <h4>🚨 시나리오 1: 장애 실시간 대응</h4>
-      <p><strong>상황:</strong> 공장 MES/ERP 장애 발생</p>
-      <p><strong>Slack:</strong> 자동 알림 → 스레드 대응 → Huddle 즉시 화상회의</p>
-      <p><strong>효과:</strong> 대응 속도 ↑, 전 과정 기록</p>
+  <h2>Slack 병행 테스트의 목적</h2>
+  <p style="font-size:0.75em; color:var(--kd-gray);">단순 메신저가 아닌, AI·시스템 통합 인터페이스로서의 가능성 검증</p>
+  <div class="card-grid">
+    <div class="card">
+      <h3>🤖 AI 에이전트 통합 허브</h3>
+      <ul>
+        <li>Slack은 글로벌 기업에서 <strong>AI 비서의 대화 창구</strong>로 활용 중</li>
+        <li>Salesforce(모회사)의 Agentforce, OpenAI ChatGPT 등 <strong>AI 에이전트가 Slack 안에서 직접 동작</strong></li>
+        <li>직원이 채널에서 질문하면 AI가 사내 데이터를 검색·요약·답변</li>
+        <li><strong>광동 활용:</strong> 논문 요약, 시장 데이터 조회, 보고서 초안 생성을 Slack 채널 안에서 수행</li>
+      </ul>
     </div>
-    <div class="scenario-box">
-      <h4>🔗 시나리오 2: 외부 파트너 협업</h4>
-      <p><strong>상황:</strong> 마케팅 대행사와 자료 공유</p>
-      <p><strong>Slack Connect:</strong> 특정 채널만 외부 공유, 히스토리 유지</p>
-      <p><strong>효과:</strong> 섀도우 IT(개인 카톡) 완벽 차단</p>
-    </div>
-    <div class="scenario-box">
-      <h4>⚙️ 시나리오 3: 업무 자동화</h4>
-      <p><strong>상황:</strong> 영업사원 방문 보고 자동화</p>
-      <p><strong>Workflow Builder:</strong> 폼 입력 → Google 시트 자동 기록</p>
-      <p><strong>효과:</strong> 앱 개발 없이 현장 데이터 수집 혁신</p>
+    <div class="card green">
+      <h3>🔗 시스템 연동 플랫폼</h3>
+      <ul>
+        <li>ERP·MES·SFA 등 기존 시스템의 <strong>알림과 워크플로우를 한 곳으로</strong> 통합</li>
+        <li>공장 장애 → 자동 알림 → 스레드 대응 → 화상회의(Huddle) 즉시 전환</li>
+        <li>외부 파트너와 <strong>Slack Connect</strong>로 보안 유지하며 협업</li>
+        <li><strong>광동 활용:</strong> 현장 이슈 실시간 대응, 대행사 협업 채널 운영</li>
+      </ul>
     </div>
   </div>
-  <div class="exec-quote" style="margin-top:12px;">
-    "Slack은 단순 메신저가 아니라 시스템의 '통합 허브'입니다.<br>
-    GWS·ERP·SFA 등 흩어진 시스템의 알림을 하나로 모으고, AI 챗봇의 인터페이스가 됩니다."
+  <div class="card-grid-3" style="margin-top:12px;">
+    <div class="scenario-box">
+      <h4>📌 Salesforce · Agentforce</h4>
+      <p>Slack 채널에서 AI 에이전트가 CRM 데이터 조회·고객 응대 자동화</p>
+    </div>
+    <div class="scenario-box">
+      <h4>📌 OpenAI · ChatGPT for Slack</h4>
+      <p>채널 대화 요약, 문서 초안 생성, 리서치를 Slack 안에서 즉시 수행</p>
+    </div>
+    <div class="scenario-box">
+      <h4>📌 Anthropic · Claude for Slack</h4>
+      <p>장문 분석, 코드 리뷰, 보고서 검토를 팀 채널에서 바로 요청</p>
+    </div>
   </div>
 </section>
 
