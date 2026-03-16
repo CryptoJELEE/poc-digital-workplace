@@ -82,12 +82,12 @@
 
   /* ── Typography ── */
   h1 { font-size: 32px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.35; }
-  h2 { font-size: 24px; font-weight: 700; letter-spacing: -0.02em; color: var(--kd-dark); margin: 0 0 14px 0; line-height: 1; position: relative; top: -8px; }
-  h3 { font-size: 16px; font-weight: 700; color: var(--kd-navy); margin: 0 0 8px 0; }
-  h4 { font-size: 14px; font-weight: 700; color: var(--kd-dark); margin: 0 0 5px 0; }
-  p { font-size: 14px; line-height: 1.7; color: var(--kd-gray); }
-  ul, ol { font-size: 14px; color: var(--kd-gray); padding-left: 20px; line-height: 1.8; }
-  li { margin-bottom: 3px; }
+  h2 { font-size: 26px; font-weight: 700; letter-spacing: -0.02em; color: var(--kd-dark); margin: 0 0 16px 0; line-height: 1.2; position: relative; top: -8px; }
+  h3 { font-size: 18px; font-weight: 700; color: var(--kd-navy); margin: 0 0 10px 0; }
+  h4 { font-size: 15px; font-weight: 700; color: var(--kd-dark); margin: 0 0 6px 0; }
+  p { font-size: 15px; line-height: 1.75; color: var(--kd-gray); }
+  ul, ol { font-size: 15px; color: var(--kd-gray); padding-left: 22px; line-height: 1.85; }
+  li { margin-bottom: 4px; }
 
   /* ── Cover ── */
   .cover { background: var(--kd-bg) !important; text-align: left; display: flex; flex-direction: column; justify-content: center; }
@@ -116,20 +116,20 @@
   .card.green { border-left-color: var(--kd-green); }
   .card.red { border-left-color: var(--kd-red); }
   .card.orange { border-left-color: var(--kd-orange); }
-  .card h3 { margin: 0 0 8px 0; font-size: 16px; }
-  .card p, .card li { font-size: 13px; color: var(--kd-gray); margin: 3px 0; }
-  .card ul { padding-left: 16px; margin: 6px 0; }
+  .card h3 { margin: 0 0 10px 0; font-size: 17px; }
+  .card p, .card li { font-size: 14px; color: var(--kd-gray); margin: 4px 0; line-height: 1.7; }
+  .card ul { padding-left: 18px; margin: 8px 0; }
 
   /* ── Big Numbers ── */
   .big-num { font-size: 48px; font-weight: 900; color: var(--kd-blue); line-height: 1; }
   .big-num.red { color: var(--kd-red); }
   .big-num.green { color: var(--kd-green); }
-  .num-label { font-size: 14px; color: var(--kd-gray); margin-top: 6px; }
+  .num-label { font-size: 15px; color: var(--kd-gray); margin-top: 8px; line-height: 1.5; }
 
   /* ── Tables ── */
-  table { font-size: 13px; border-collapse: collapse; width: 100%; margin-top: 12px; }
-  th { background: var(--kd-navy); color: white; padding: 10px 14px; text-align: left; font-weight: 500; font-size: 13px; }
-  td { padding: 9px 14px; border-bottom: 1px solid #D8D3CC; font-size: 13px; }
+  table { font-size: 14px; border-collapse: collapse; width: 100%; margin-top: 14px; }
+  th { background: var(--kd-navy); color: white; padding: 12px 16px; text-align: left; font-weight: 500; font-size: 14px; }
+  td { padding: 10px 16px; border-bottom: 1px solid #D8D3CC; font-size: 14px; }
   tr:nth-child(even) { background: var(--kd-bg-light); }
   .winner { background: #E8F0E4 !important; font-weight: 500; }
 
@@ -155,12 +155,12 @@
   .compare h3 { margin: 0 0 8px 0; font-size: 15px; }
 
   /* ── Quote ── */
-  .exec-quote { background: var(--kd-bg-light); border-left: 4px solid var(--kd-accent); padding: 14px 20px; border-radius: 0 8px 8px 0; margin: 16px 0; font-style: italic; font-size: 13px; color: var(--kd-gray); line-height: 1.7; }
+  .exec-quote { background: var(--kd-bg-light); border-left: 4px solid var(--kd-accent); padding: 16px 24px; border-radius: 0 8px 8px 0; margin: 20px 0; font-style: italic; font-size: 14px; color: var(--kd-gray); line-height: 1.8; }
 
   /* ── Scenario ── */
-  .scenario-box { background: var(--kd-bg-light); border-radius: 8px; padding: 16px 18px; margin: 4px 0; }
-  .scenario-box h4 { margin: 0 0 6px; font-size: 14px; }
-  .scenario-box p { font-size: 12px; margin: 3px 0; line-height: 1.6; }
+  .scenario-box { background: var(--kd-bg-light); border-radius: 8px; padding: 18px 20px; margin: 5px 0; }
+  .scenario-box h4 { margin: 0 0 8px; font-size: 15px; }
+  .scenario-box p { font-size: 13px; margin: 4px 0; line-height: 1.7; }
 
   /* ── Risk ── */
   .risk-high { color: var(--kd-red); font-weight: 700; }
@@ -480,7 +480,7 @@
         <tr><td style="font-weight:700;">대상 부서</td><td>CMO본부 (95명) + 기획관리본부 (60명)</td></tr>
         <tr><td style="font-weight:700;">총 참여 인원</td><td><strong>155명</strong></td></tr>
         <tr><td style="font-weight:700;">라이선스</td><td>GWS Enterprise Standard + Slack Business+</td></tr>
-        <tr><td style="font-weight:700;">PoC 비용</td><td>트라이얼 협의 중 (별도 산출)</td></tr>
+        <tr><td style="font-weight:700;">PoC 비용</td><td>GWS 무상(트라이얼) + Slack $250 (10명 유료)</td></tr>
       </tbody>
     </table>
     <div class="card-grid mt-16">
@@ -801,7 +801,7 @@
       <thead><tr><th>항목</th><th>산출 근거</th><th>비용</th></tr></thead>
       <tbody>
         <tr><td><strong>GWS 라이선스</strong></td><td>Enterprise Standard × 155명 × 8주</td><td><strong>무상 (트라이얼)</strong></td></tr>
-        <tr><td><strong>Slack 라이선스</strong></td><td>Business+ × 대상 인원 × 8주</td><td>협의 중</td></tr>
+        <tr><td><strong>Slack 라이선스</strong></td><td>Business+ $12.50/월 × 10명 × 2개월</td><td><strong>$250 (약 36만원)</strong></td></tr>
         <tr><td><strong>교육/변경관리</strong></td><td>메가존 서비스 제공</td><td><strong>무상</strong></td></tr>
       </tbody>
     </table>
