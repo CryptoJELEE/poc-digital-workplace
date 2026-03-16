@@ -322,33 +322,35 @@
 <div class="page">
   <div class="page-logo"><img src="logo-vertical.png" alt="Kwangdong"></div>
   <div class="page-inner">
-    <h2>업무 환경 전환으로 열리는 가능성</h2>
-    <p style="margin-bottom:8px;">현재 업무 방식에서 개선할 수 있는 영역</p>
-    <div class="card-grid-3">
-      <div class="card" style="text-align:center; border-left-color:var(--kd-accent);">
-        <div class="big-num" style="color:var(--kd-accent);">8h</div>
-        <div class="num-label">주당 정보 검색·취합에<br>사용하는 시간</div>
+    <h2>현재 업무 방식의 구체적 비효율</h2>
+    <p style="margin-bottom:8px;">PoC로 검증할 핵심 개선 포인트 4가지</p>
+    <div class="card-grid">
+      <div class="card red">
+        <h3>📄 보고서 취합·합본</h3>
+        <p>각 부서가 PPT/엑셀을 메일로 회신 → 담당자가 수작업으로 합본</p>
+        <p><strong>문제:</strong> "최종_v3_진짜.pptx" 버전 혼선, 서식 불일치, 반복 수정</p>
+        <p style="color:var(--kd-green);"><strong>→ GWS:</strong> Slides 동시 편집으로 합본 작업 자체를 제거</p>
       </div>
-      <div class="card" style="text-align:center; border-left-color:var(--kd-accent);">
-        <div class="big-num" style="color:var(--kd-accent);">5.2개</div>
-        <div class="num-label">보고서 1건당<br>평균 파일 버전 수</div>
+      <div class="card red">
+        <h3>💬 정보 전달·의사결정 지연</h3>
+        <p>메일 기반 소통 → 회신 대기, 참조 누락, 히스토리 단절</p>
+        <p><strong>문제:</strong> 긴급 이슈도 메일/개인 메신저 산재, 사후 추적 불가</p>
+        <p style="color:var(--kd-green);"><strong>→ Slack:</strong> 채널 기반 실시간 소통 + 스레드로 이력 자동 보존</p>
       </div>
-      <div class="card" style="text-align:center; border-left-color:var(--kd-accent);">
-        <div class="big-num" style="color:var(--kd-accent);">3일</div>
-        <div class="num-label">보고서 1건<br>완성 평균 소요일</div>
+      <div class="card red">
+        <h3>📁 파일·지식 검색</h3>
+        <p>PC 로컬 저장 → 담당자 부재 시 파일 위치 모름</p>
+        <p><strong>문제:</strong> 과거 문서 찾기에 상당한 시간 소요, 퇴사 시 지식 유실</p>
+        <p style="color:var(--kd-green);"><strong>→ Drive:</strong> 클라우드 단일 저장소 + 전문 검색 + 퇴사자 데이터 보존</p>
+      </div>
+      <div class="card red">
+        <h3>🤖 AI 활용 기반 부재</h3>
+        <p>현재 인프라에서는 AI 도구를 업무에 즉시 연동할 수 없음</p>
+        <p><strong>문제:</strong> AI 활용이 개인 수준에 머무르고, 업무 프로세스에 내장 불가</p>
+        <p style="color:var(--kd-green);"><strong>→ GWS+Slack:</strong> Gemini·AI 에이전트가 업무 흐름 안에서 직접 동작</p>
       </div>
     </div>
-    <div class="card-grid mt-12">
-      <div class="card green" style="text-align:center;">
-        <div class="big-num green" style="font-size:28px;">→ 실시간</div>
-        <div class="num-label">클라우드 공동편집으로<br>취합·합본 단계 자체를 제거</div>
-      </div>
-      <div class="card green" style="text-align:center;">
-        <div class="big-num green" style="font-size:28px;">→ AI 자동화</div>
-        <div class="num-label">문서 요약, 데이터 분석, 초안 생성을<br>AI가 보조하는 환경으로 전환</div>
-      </div>
-    </div>
-    <p class="text-xs mt-8">※ 정확한 수치는 PoC 기간 사전 설문을 통해 확보 예정 (별첨 A 참조)</p>
+    <p class="text-xs mt-8">※ 각 항목의 정확한 현재 수치는 PoC 시작 전 사전 설문으로 측정합니다 (별첨 A 참조)</p>
   </div>
   <div class="page-num">5</div>
 </div>
