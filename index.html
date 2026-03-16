@@ -30,25 +30,10 @@
   .reveal .slides { box-shadow: 0 4px 20px rgba(0,0,0,0.15); border-radius: 4px; }
   .reveal .slides section { padding: 36px 44px; border: 1px solid #D0CBC3; box-sizing: border-box; }
   .reveal .slides > section { background: var(--kd-white); position: relative; }
-  /* 일반 장표 상단 헤더 바 */
-  .reveal .slides > section:not(.cover-slide):not(.section-divider)::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    height: 80px;
-    background: var(--kd-bg);
-    z-index: 0;
-  }
-  .reveal .slides > section:not(.cover-slide):not(.section-divider)::after {
-    content: '';
-    position: absolute;
-    top: 60px; left: 0; right: 0;
-    height: 40px;
-    background: var(--kd-white);
-    border-radius: 50% 50% 0 0 / 100% 100% 0 0;
-    z-index: 0;
-  }
-  .reveal .slides > section:not(.cover-slide):not(.section-divider) > * { position: relative; z-index: 1; }
+  /* 일반 장표 상단 헤더 바 (JS로 삽입) */
+  .slide-header-bar { position: absolute; top: 0; left: 0; right: 0; height: 80px; background: var(--kd-bg); z-index: 0; pointer-events: none; }
+  .slide-header-curve { position: absolute; top: 55px; left: 0; right: 0; z-index: 0; pointer-events: none; }
+  .slide-header-curve svg { display: block; width: 100%; height: 50px; }
   /* 우상단 Kwangdong 로고 (일반 슬라이드) */
   .slide-logo { position: absolute; top: 8px; right: 28px; z-index: 2; }
   .slide-logo img { height: 56px; }
@@ -1332,8 +1317,18 @@ Reveal.initialize({
   controlsTutorial: false
 });
 
-// 일반 슬라이드에 Kwangdong 로고 자동 삽입
+// 일반 슬라이드에 헤더 바 + 곡선 + 로고 자동 삽입
 document.querySelectorAll('.reveal .slides > section:not(.cover-slide):not(.section-divider)').forEach(function(slide) {
+  // 헤더 바
+  var bar = document.createElement('div');
+  bar.className = 'slide-header-bar';
+  slide.insertBefore(bar, slide.firstChild);
+  // 곡선
+  var curve = document.createElement('div');
+  curve.className = 'slide-header-curve';
+  curve.innerHTML = '<svg viewBox="0 0 1280 50" preserveAspectRatio="none"><path d="M0,0 L0,10 Q640,50 1280,10 L1280,0 Z" fill="#EDE8E0"/></svg>';
+  slide.insertBefore(curve, bar.nextSibling);
+  // 로고
   var logo = document.createElement('div');
   logo.className = 'slide-logo';
   logo.innerHTML = '<img src="logo-vertical.png" alt="Kwangdong">';
