@@ -6,17 +6,8 @@
 <title>업무 생산성 혁신을 위한 디지털 워크플레이스 전환 검증 계획</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/white.css">
-<script>var link=document.createElement('link');link.rel='stylesheet';link.type='text/css';link.href=window.location.search.match(/print-pdf/gi)?'https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/css/print/pdf.css':'';document.getElementsByTagName('head')[0].appendChild(link);</script>
-<style>
-  .reveal { background: #EDE8E0; }
-  @media print {
-    @page { size: A4 landscape; margin: 0; }
-    body { background: white !important; }
-    .reveal { background: white !important; }
-    .reveal .slides { box-shadow: none; }
-    .reveal .slides section { border: none; page-break-after: always; page-break-inside: avoid; }
-  }
-</style>
+
+<style>.reveal { background: #EDE8E0; }</style>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
   :root {
@@ -1331,12 +1322,7 @@ document.querySelectorAll('.reveal .slides > section:not(.cover-slide):not(.sect
   slide.appendChild(logo);
 });
 
-// 인쇄 버튼 (우하단)
-var printBtn = document.createElement('div');
-printBtn.innerHTML = '🖨️ PDF';
-printBtn.style.cssText = 'position:fixed;bottom:16px;right:16px;z-index:9999;background:#3D4F5F;color:#fff;padding:8px 16px;border-radius:8px;font-size:14px;cursor:pointer;font-family:Noto Sans KR,sans-serif;box-shadow:0 2px 8px rgba(0,0,0,0.2);';
-printBtn.onclick = function() { window.open(location.href.split('?')[0] + '?print-pdf', '_blank'); };
-if (!window.location.search.match(/print-pdf/gi)) document.body.appendChild(printBtn);
+
 </script>
 </body>
 </html>
