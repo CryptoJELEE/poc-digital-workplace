@@ -460,7 +460,101 @@
   </div>
 </section>
 
-<!-- 3-2: 검증 프레임워크 -->
+<!-- 3-2: 부서별 검증 시나리오 -->
+<section>
+  <h2>부서별 핵심 검증 시나리오</h2>
+  <p style="font-size:0.75em; color:var(--kd-gray);">각 부서의 실제 업무를 새로운 도구로 수행하고, AS-IS 대비 변화를 측정합니다</p>
+  <table style="font-size:0.62em;">
+    <thead>
+      <tr><th>부서</th><th>검증 시나리오</th><th>현재 방식 (AS-IS)</th><th>PoC 방식 (TO-BE)</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>전략기획</strong></td>
+        <td>경영보고서 공동 작성</td>
+        <td>각 부서 PPT 메일 회신 → 수작업 합본</td>
+        <td>Slides 공동편집, 합본 작업 제거</td>
+      </tr>
+      <tr>
+        <td><strong>영업지원</strong></td>
+        <td>견적서·계약서 검토</td>
+        <td>메일 첨부 핑퐁, 최종본 혼선</td>
+        <td>Docs 제안 모드, 버전 자동 관리</td>
+      </tr>
+      <tr>
+        <td><strong>총무</strong></td>
+        <td>전사 공지·시설 요청</td>
+        <td>메일 공지(확인 불가), 전화/구두 요청</td>
+        <td>채널 공지(리액션 확인), 양식 자동 접수</td>
+      </tr>
+      <tr>
+        <td><strong>삼다수사업</strong></td>
+        <td>일일 현황 + 긴급 이슈 대응</td>
+        <td>단톡방/메일 산재, 대응 기록 없음</td>
+        <td>대시보드 실시간 공유, 이슈 스레드 기록</td>
+      </tr>
+      <tr>
+        <td><strong>디자인</strong></td>
+        <td>요청 접수~시안~납품 전체</td>
+        <td>구두/메일 요청(양식 없음), 시안 메일 반복</td>
+        <td>워크플로우 양식 통일, 스레드 피드백</td>
+      </tr>
+      <tr>
+        <td><strong>F&B영업</strong></td>
+        <td>거래처 미팅 기록 + 프로모션 조율</td>
+        <td>개인 노트, 온/오프 정보 분리</td>
+        <td>모바일 Docs 즉시 작성, 통합 캘린더</td>
+      </tr>
+      <tr>
+        <td><strong>브랜드전략</strong></td>
+        <td>캠페인 기획~실행~분석</td>
+        <td>부서 순차 메일 전달, 정보 단절</td>
+        <td>프로젝트 채널에서 전 부서 동시 진행</td>
+      </tr>
+      <tr>
+        <td><strong>IT운영</strong></td>
+        <td>IT 요청 처리 + 장애 공지</td>
+        <td>전화/메일 접수, 이력 추적 불가</td>
+        <td>양식 자동 접수, 상태 공지 채널</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- 3-3: 크로스 본부 시나리오 -->
+<section>
+  <h2>크로스 본부 검증 시나리오</h2>
+  <p style="font-size:0.75em; color:var(--kd-gray);">부서 내 개선뿐 아니라, 본부 간 협업이 얼마나 빨라지는지를 핵심적으로 검증합니다</p>
+  <div class="card-grid">
+    <div class="scenario-box">
+      <h4>🚀 A. 신제품/시즌 캠페인 론칭</h4>
+      <p>삼다수사업 + 브랜드 + 디자인 + 영업 + CMO전략</p>
+      <p>프로젝트 채널에서 기획→제작→영업준비→론칭→분석까지 한 곳에서 진행</p>
+      <p><strong>검증:</strong> 기획~론칭 리드타임, 부서 간 정보 누락 건수</p>
+    </div>
+    <div class="scenario-box">
+      <h4>📊 B. 월간 경영보고</h4>
+      <p>전략기획 + CMO전략 + 각 본부</p>
+      <p>Slides 공동편집으로 수작업 합본 제거, 리마인더로 마감 관리</p>
+      <p><strong>검증:</strong> 합본 작업 시간, 마감 준수율</p>
+    </div>
+    <div class="scenario-box">
+      <h4>📝 C. 거래처 계약 프로세스</h4>
+      <p>F&B영업 + 영업지원 + 전략기획</p>
+      <p>Docs 제안 모드로 검토~확정, 버전 혼선 제거</p>
+      <p><strong>검증:</strong> 검토 리드타임, 버전 혼선 건수</p>
+    </div>
+    <div class="scenario-box">
+      <h4>🎨 D. 디자인 요청 통합</h4>
+      <p>전 부서 → 디자인팀</p>
+      <p>통일된 양식으로 접수, 우선순위 기반 배분, 스레드 피드백</p>
+      <p><strong>검증:</strong> 재확인 핑퐁 감소, 마감 준수율</p>
+    </div>
+  </div>
+  <p style="font-size:0.65em; color:#b3bac5; margin-top:12px;">※ 시나리오별 상세 워크플로우(AS-IS → TO-BE), Slack 채널 구성, GWS 활용 방안은 별첨 가이드 참조</p>
+</section>
+
+<!-- 3-4: 검증 프레임워크 -->
 <section>
   <h2>검증 프레임워크: 두 가지 축</h2>
   <div class="card-grid">
