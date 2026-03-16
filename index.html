@@ -6,7 +6,17 @@
 <title>업무 생산성 혁신을 위한 디지털 워크플레이스 전환 검증 계획</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/white.css">
-<style>.reveal { background: #EDE8E0; }</style>
+<script>var link=document.createElement('link');link.rel='stylesheet';link.type='text/css';link.href=window.location.search.match(/print-pdf/gi)?'https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/css/print/pdf.css':'';document.getElementsByTagName('head')[0].appendChild(link);</script>
+<style>
+  .reveal { background: #EDE8E0; }
+  @media print {
+    @page { size: A4 landscape; margin: 0; }
+    body { background: white !important; }
+    .reveal { background: white !important; }
+    .reveal .slides { box-shadow: none; }
+    .reveal .slides section { border: none; page-break-after: always; page-break-inside: avoid; }
+  }
+</style>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
   :root {
