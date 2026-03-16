@@ -29,7 +29,7 @@
   body { background: #C8C3BB !important; }
   .reveal { font-family: 'Noto Sans KR', sans-serif; font-size: 24px; color: var(--kd-dark); background: transparent !important; }
   .reveal .slides { box-shadow: 0 4px 20px rgba(0,0,0,0.15); border-radius: 4px; }
-  .reveal .slides section { border: 1px solid #D0CBC3; box-sizing: border-box; height: 720px !important; max-height: 720px !important; overflow: hidden !important; }
+  .reveal .slides section { border: 1px solid #D0CBC3; box-sizing: border-box; overflow: hidden !important; }
   .reveal .slides > section { background: linear-gradient(to bottom, var(--kd-bg) 0px, var(--kd-bg) 56px, var(--kd-white) 57px, var(--kd-white) 100%); padding: 8px 32px 12px 32px; }
   /* 우상단 Kwangdong 로고 (일반 슬라이드) */
   .slide-logo { position: absolute; top: 6px; right: 30px; }
@@ -1149,9 +1149,7 @@
       </ul>
     </div>
   </div>
-  <p style="font-size:0.55em; color:var(--kd-gray); margin-top:4px;">+ 🛡️ 운영 4개 · 📁 프로젝트 채널 (캠페인별 개설→아카이빙)</p>
-  <h3 style="margin-top:8px; font-size:0.8em;">📁 GWS 공유 드라이브</h3>
-  <p style="font-size:0.52em; color:var(--kd-gray);">기획관리(영업지원·총무·전략기획) · CMO(삼다수·디자인·F&B·브랜드·CMO전략) · 운영(IT·정보보호) — 본부별 격리, 1등급 저장 금지</p>
+  <p style="font-size:0.52em; color:var(--kd-gray); margin-top:4px;">+ 🛡️ 운영 4개 · 📁 프로젝트 채널 (캠페인별 개설→아카이빙) · Drive: 본부별 격리, 1등급 저장 금지</p>
 </section>
 
 <!-- ============================================ -->
@@ -1187,7 +1185,43 @@ document.querySelectorAll('.reveal .slides > section:not(.cover-slide):not(.sect
   slide.appendChild(logo);
 });
 
+// 🔑 Auto-fit: 렌더링 후 넘치는 콘텐츠를 자동 축소
+Reveal.on('ready', function() { autoFitSlides(); });
+Reveal.on('slidechanged', function() { autoFitSlides(); });
 
+function autoFitSlides() {
+  var slides = document.querySelectorAll('.reveal .slides > section');
+  var maxH = 720; // slide height
+  slides.forEach(function(slide) {
+    // 기존 wrapper 있으면 스킵
+    if (slide.querySelector('.auto-fit-wrap')) return;
+    // section-divider, cover는 스킵
+    if (slide.classList.contains('section-divider') || slide.classList.contains('cover-slide')) return;
+    
+    // 자식들을 wrapper div에 넣기
+    var wrap = document.createElement('div');
+    wrap.className = 'auto-fit-wrap';
+    wrap.style.cssText = 'transform-origin: top left; width: 100%;';
+    while (slide.firstChild) wrap.appendChild(slide.firstChild);
+    slide.appendChild(wrap);
+    
+    // 패딩 제외한 가용 높이
+    var cs = getComputedStyle(slide);
+    var padTop = parseFloat(cs.paddingTop) || 0;
+    var padBot = parseFloat(cs.paddingBottom) || 0;
+    var available = maxH - padTop - padBot;
+    
+    // 콘텐츠가 넘치면 scale down
+    var contentH = wrap.scrollHeight;
+    if (contentH > available) {
+      var scale = available / contentH;
+      scale = Math.max(scale, 0.55); // 최소 55%까지만
+      wrap.style.transform = 'scale(' + scale + ')';
+      wrap.style.width = (100 / scale) + '%';
+      wrap.style.height = (available / scale) + 'px';
+    }
+  });
+}
 </script>
 </body>
 </html>
