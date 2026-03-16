@@ -26,16 +26,16 @@
     --kd-light: #F5F2ED;
   }
   body { background: #C8C3BB !important; }
-  .reveal { font-family: 'Noto Sans KR', sans-serif; font-size: 26px; color: var(--kd-dark); background: transparent !important; }
+  .reveal { font-family: 'Noto Sans KR', sans-serif; font-size: 24px; color: var(--kd-dark); background: transparent !important; }
   .reveal .slides { box-shadow: 0 4px 20px rgba(0,0,0,0.15); border-radius: 4px; }
   .reveal .slides section { border: 1px solid #D0CBC3; box-sizing: border-box; }
-  .reveal .slides > section { background: linear-gradient(to bottom, var(--kd-bg) 0px, var(--kd-bg) 64px, var(--kd-white) 65px, var(--kd-white) 100%); padding: 10px 36px 16px 36px; display: flex !important; flex-direction: column; justify-content: flex-start; height: 100%; }
+  .reveal .slides > section { background: linear-gradient(to bottom, var(--kd-bg) 0px, var(--kd-bg) 56px, var(--kd-white) 57px, var(--kd-white) 100%); padding: 8px 32px 12px 32px; }
   /* 우상단 Kwangdong 로고 (일반 슬라이드) */
   .slide-logo { position: absolute; top: 10px; right: 30px; }
   .slide-logo img { height: 50px; }
   .reveal h1, .reveal h2, .reveal h3 { font-weight: 700; color: var(--kd-dark); letter-spacing: -0.02em; }
   .reveal h1 { font-size: 2.0em; }
-  .reveal h2 { font-size: 1.1em; border-bottom: none; padding-bottom: 0; display: block; margin-bottom: 8px; margin-top: 0; line-height: 64px; }
+  .reveal h2 { font-size: 1.05em; border-bottom: none; padding-bottom: 0; display: block; margin-bottom: 4px; margin-top: 0; line-height: 48px; }
   .reveal h3 { font-size: 1.15em; color: var(--kd-navy); }
   .reveal .slide-number { font-size: 14px; color: var(--kd-gray-light); }
   .reveal section { text-align: left; }
@@ -49,8 +49,8 @@
   .cover-slide .company { font-size: 0.9em; color: var(--kd-dark); font-weight: 700; margin-bottom: 0.5em; }
 
   /* Cards */
-  .card-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 8px; flex: 1; align-content: start; }
-  .card-grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin-top: 8px; flex: 1; align-content: start; }
+  .card-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 6px; }
+  .card-grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; margin-top: 6px; }
   .card { background: var(--kd-bg-light); border-radius: 8px; padding: 12px 14px; border-left: 4px solid var(--kd-blue); box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
   .card.green { border-left-color: var(--kd-green); }
   .card.red { border-left-color: var(--kd-red); }
@@ -1303,7 +1303,7 @@ Reveal.initialize({
   slideNumber: 'c/t',
   width: 1280,
   height: 720,
-  margin: 0.02,
+  margin: 0.01,
   minScale: 0.5,
   maxScale: 1.0,
   transition: 'fade',
