@@ -30,6 +30,8 @@
   .reveal .slides { box-shadow: 0 4px 20px rgba(0,0,0,0.15); border-radius: 4px; }
   .reveal .slides section { padding: 36px 44px; border: 1px solid #D0CBC3; box-sizing: border-box; }
   .reveal .slides > section { background: var(--kd-white); position: relative; }
+  /* 일반 장표: 콘텐츠가 헤더 바 위에 표시되도록 */
+  .reveal .slides > section:not(.cover-slide):not(.section-divider) > *:not(.slide-header-bar):not(.slide-header-curve):not(.slide-logo) { position: relative; z-index: 1; }
   /* 일반 장표 상단 헤더 바 (JS로 삽입) */
   .slide-header-bar { position: absolute; top: 0; left: 0; right: 0; height: 80px; background: var(--kd-bg); z-index: 0; pointer-events: none; }
   .slide-header-curve { position: absolute; top: 55px; left: 0; right: 0; z-index: 0; pointer-events: none; }
